@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>r/pics/frame</title>
+        <link rel="stylesheet" type="text/css" href="reset.css"></link>
+        <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                entries = [];
+                current = 0;
+                //bwidth = $(document).width();
+                //bheight = $(document).height();
+                bwidth = window.innerWidth;
+                bheight = window.innerHeight;
+                pause = false;
+
+                place([], "loading"); //this isn't needed. it's just one line
+                scrape(entries);
+
+                setInterval(function() {
+                    if (pause != true) {
+                        if (current >= (entries.length - 1)) {
+                            /*place(entries, (entries.length - 1));
+                            current = 0;*/
+                            place([], "loading");
+                            current = 0;
+                            entries = [];
+                            scrape(entries);
+                        } else {
+                            place(entries, current);
+                            current++;
+                        }
+                    }
+                }, 25000); //15000);
+
+                $('#pause').click( function() {
+                    if (pause == false) {
+                        pause = true;
+                    } else {
+                        pause = false;
+                    }
+                });
+
+                $('#next').click( function() {
+                    if (current != "loading") {
+                        if (current >= entries.length) {
+                            place(entries, 0);
+                            current = 1;
+                        } else {
+                            place(entries, current);
+                            current++;
+                        }
+                    }
+                });
+
+                $('#previous').click( function() {
+                    if (current != "loading") {
+                        if (current <= 1) {
+                            place(entries, entries.length - 1);
+                            current = entries.length;
+                        } else {
+                            current--;
+                            place(entries, current - 1);
+                        }
+                    }
+                });
+            });
+            var bwidth;
+            var bheight;
+            var current;
+            var pause;
+            var entries;
+
+            function scrape(entries) {
+                var directLink = new RegExp(
+                '\.(jpg|jpeg|png|bmp|gif)$');
+                var count = 0;
+                var isNSFW = new RegExp('nsfw');
+                if (isNSFW.test(window.location.href)) 
+                { var nsfw = true; } else { var nsfw = false; }
+
+                $.getJSON('http://www.reddit.com/r/all.json?jsonp=?&limit=10',
+                //$.getJSON('http://www.reddit.com/r/all.json?jsonp=?&limit=100',
+                function(data) {
+                    $.each(data.data.children, function(i, item) {
+                        if((directLink.test(item.data.url)) && 
+                        (((nsfw == false) && (item.data.over_18 == false)) ||
+                        (nsfw == true))) {
+                            entries[count] = [];
+                            entries[count]['title'] = item.data.title;
+                            entries[count]['url'] = item.data.url;
+                            entries[count]['permalink'] = item.data.permalink;
+                    //entries[count]['order'] = Math.floor(Math.random() * 100);
+                            setDimensions(entries, count, item.data.url);
+
+                            count++;
+                    //$('#json').append('<p>'+item.data.title+' '+count+'</p>');
+                        }
+                    });
+                    //alert(count + " total");
+                    //place(entries, 0); //move this elsewhere?
+                //entries.sort(function(a, b) { return a.order - b.order; });
+                });
+                //shuffle here.
+                //return entries;
+                //entries.sort(function() {return 0.5 - Math.random()});
+                //alert(Math.floor(Math.random() * 100));
+                /*alert(entries.length);
+                for (var i = 0; i < entries.length; i++) {
+                    var swap = entries[i];
+                    var position = Math.floor(Math.random() * count);
+                    entries[i] = entries[position];
+                    entries[position] = swap;
+                }*/
+            }
+
+            function setDimensions(entries, count, url) {
+                orig_image = new Image();
+                orig_image.onload = function() {
+                    var iwidth = this.width;
+                    var iheight = this.height;
+                    var nwidth = this.width;
+                    var nheight = this.height;
+                    if (iwidth > bwidth) {
+                        nheight = parseInt((iheight / (iwidth / bwidth)));
+                        nwidth = bwidth;
+                    }
+                    if (iheight > bheight) {
+                        nwidth = parseInt((iwidth / (iheight / bheight)));
+                        nheight = bheight;
+                    }
+                    entries[count]['width'] = nwidth;
+                    entries[count]['height'] = nheight;
+                }
+                orig_image.src = url;
+                entries[count]['image'] = orig_image;
+            }
+
+            function place(entries, current) {
+                //alert("current is " + current);
+                if (current == "loading") {
+            //loading.gif from http://www.sanbaldo.com/wordpress/1/ajax_gif/
+                    $('#image').attr('src', "loading.gif").width("auto").height("auto");
+                } else {
+                    $('#dimensions').html(entries[current].width + " x " +
+                    entries[current].height);
+                    //maybe copy img obj instead of downloading
+                    //$('#image').attr('src', entries[current].url).width(entries[current].width).height(entries[current].height);
+                    //$('#image').attr('src', entries[current].image.src).width(entries[current].width).height(entries[current].height);
+
+                    //$('#image').width(entries[current].width);
+                    //$('#image').height(entries[current].height);
+                    //$('#image').attr('src', entries[current].image.src);
+                    $('#image').width(entries[current].width).height(entries[current].height).attr('src', entries[current].image.src);
+
+                    $('#url').attr('href', "http://www.reddit.com" + 
+                    entries[current].permalink).html(entries[current].title);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <img id="image"></img> <br />
+            <p id="dimensions"></p>
+            <a id="url"></a>
+            <p><span id="previous">previous</span><span id="pause"> pause </span><span id="next">next</span></a>
+            <p id='json'></a>
+        </div>
+    </body>
+</html>

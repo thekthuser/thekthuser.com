@@ -1,0 +1,136 @@
+body {
+    background-color: #222222;
+    color: #DAA520;
+    /*font-family: inconsolata, serif;*/
+    /*font-family: vera-sans, serif;*/
+    }
+#container {
+    /*font-family: vera-sans, serif;*/
+    /*font-family: droid-sans-mono, serif;*/
+    /*font-family: pt-mono, serif;*/
+    font-family: ubuntu--mono, serif;
+    }
+sup {
+    vertical-align: super;
+    font-size: .7em;
+    }
+#header {
+    width: 100%;
+    height: 6em;
+    text-align: center;
+    border-color: #DAA520;
+    border-style: solid;
+    border-bottom-width: .75em;
+    }
+#header h1 {
+    line-height: 6em;
+    /*font-family: "Lucida Console", Monaco, monospace;*/
+    }
+#title {
+    word-spacing: -0.3em;
+    }
+
+#nav {
+    float: left;
+    width: 20%;
+    /*height: 100%;*/
+    border-color: #DAA520;
+    border-style: solid;
+    border-right-width: 2px;
+    border-top-right-radius: 2.25em;
+    margin-top: -.75em;
+    }
+#nav ul li {
+    height: 3em;
+    }
+
+#main {
+    float: left;
+    width: 60%;
+    text-align: left;
+    }
+
+#h {
+    display: block;
+    width:100%;
+    height: 6em;
+    font-family: inconsolata, serif;
+    text-align: center;
+    }
+#hl {
+    float: left;
+    width: 20%;
+}
+#hc {
+    float: left;
+    /*background:green;*/
+    width: 60%;
+    height: 100%;
+    border-color: #DAA520;
+    border-style: solid;
+    border-bottom-width: .75em;
+    border-right-width: .75em;
+    margin-right: -.75em;
+    border-bottom-right-radius: 1.25em;
+    /*border-bottom-left-radius: 2.25em;*/
+    line-height: 6em;
+    }
+#hc h1 {
+    font-size: 3em;
+    }
+#hc:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #222222;
+    border-left: 1px solid #DAA520;
+    position: absolute;
+    top: 100px;
+    left: -1px;
+    z-index: 1;
+    }
+#hc:after {
+    background: #222222;
+    content: '';
+    border-radius: 20px 0 0 0;
+    border: solid #DAA520;
+    border-width: .75em 0 0 .75em;
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    /*top: 100px;
+    left: 0;*/
+    z-index: 1;
+    }
+#hr {
+    float: left;
+    width: 20%;
+    }
+
+li {
+    border-color: #DAA520;
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    }
+
+#inconsolata {
+    font-size: 3em;
+    font-family: inconsolata, serif;
+    }
+#vera-sans {
+    font-size: 3em;
+    font-family: vera-sans, serif;
+    }
+#droid-sans {
+    font-size: 3em;
+    font-family: droid-sans, serif;
+    }
+#pt-mono {
+    font-size: 3em;
+    font-family: pt-mono, serif;
+    }
+#ubuntu-mono {
+    font-size: 3em;
+    font-family: ubuntu-mono, serif;
+    }

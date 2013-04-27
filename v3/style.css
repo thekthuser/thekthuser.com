@@ -1,0 +1,107 @@
+body {
+    background-color: #222222;
+    color: #DAA520;
+    font-family: inconsolata, serif;
+    }
+#header {
+    width: 100%;
+    overflow: hidden;
+    /*border-style: solid;
+    border-color: #DAA520;*/
+    /*border-right-width: 5px;*/
+    /*border-bottom-width: 5px;*/
+    }
+#h-left {
+    width: 20%;
+    height: 7em;
+    float: left;
+    border-style: none;
+    /*border-color: #DAA520;*/
+    border-bottom-width: 1.5em;
+    }
+#h-center {
+    width: 80%;
+    height: 7em;
+    float: left;
+    line-height: 7em;
+    text-align: center;
+    border-style: solid;
+    border-color: #DAA520;
+    border-right-width: 6px;
+    border-bottom-width: 1.5em;
+    }
+h1 {
+    /*position: absolute;*/
+    font-size: 3em;
+    /*left: 25%;*/
+    }
+#h-right {
+    width: 15%;
+    height: 7em;
+    float: left;
+    }
+sup {
+    vertical-align: super;
+    font-size: .6em;
+    }
+#title {
+    word-spacing: -0.33em;
+    }
+#title2 {
+    word-spacing: -.4em;
+    }
+#nav {
+    float:left;
+    width: 20%;
+    text-align: left;
+    text-indent: 1.5em;
+    margin-top: -1.5em;
+    border-top: 0em;
+    /*border-style: solid;
+    border-color: #DAA520;
+    border-right-width: 5px;
+    border-bottom-width: 5px;*/
+    }
+#nav-button {
+    height: 1.5em;
+    background: #DAA520;
+    color: #222222;
+    line-height: 1.5em;
+    border-style: solid;
+    border-color: #DAA520;
+    /*border-bottom-width: 1px;*/
+    list-style-type: none;
+    }
+#nav-button:hover {
+    background: #DAA520;
+    color: #222222;
+    }
+#nav ul {
+    display: none;
+    border-style: solid;
+    border-color: #DAA520;
+    border-bottom-width: 1px;
+    }
+#nav li {
+    height: 1.5em;
+    line-height: 1.5em;
+    border-style: solid;
+    border-color: #DAA520;
+    border-right-width: 2px;
+    /*border-bottom-width: 1px;*/
+    }
+#nav li:hover {
+    background: #DAA520;
+    color: #222222;
+    }
+.oversize {
+    font-size: .9em;
+    /*font-weight: bold;*/
+    }
+#main {
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    padding: 6px;
+    text-align: justify;
+    }

@@ -1,0 +1,9 @@
+body{background-color: #222222;}
+#container {color: white; text-align:center; font-family:"Gill Sans"; font-size:15px}
+#controls{display:block; padding-top:9px;}
+#pause {padding-left:3px; padding-right:3px;}
+#image {}
+#url {color:#A0A0A0; display:block; padding-top:9px; padding-bottom:3px;}
+#url:visited {color:#DCDCDC;}
+.num {font-size:8px; color:#A0A0A0;}
+#spinner {display:block; margin-top:30px;}
