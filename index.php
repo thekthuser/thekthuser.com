@@ -11,8 +11,8 @@
         $(document).ready(function() {
 
         //alert("<?php echo "ASDF"; ?>");
-        <?php session_start(); ?>
-        alert("<?php echo $_SESSION['page']; ?>");
+        //<?php session_start(); ?>
+        //alert("<?php echo $_SESSION['page']; ?>");
 
             //drop nav
             $('#nav-button').mouseenter(function() {
@@ -26,13 +26,13 @@
                 $('#nav-button').css('background', '#DAA520');
                 $('#nav-button').css('color', '#222222');
             });
-            $('li').click(function() {
-                var page = $(this).attr('title');
-                //$('#main').load('./content.php');
+
+            function swapPage(page) {
+                //alert(page);
                 switch(page) {
                     case 'projects':
                         $('#main').load('content/projects.php');
-                        <?php $_SESSION['page'] = "projects"; ?>
+                        <?php //$_SESSION['page'] = "projects"; ?>
                         break;
 
                     case 'sample_code':
@@ -47,6 +47,12 @@
                         $('#main').html('');
                         break;
                 }
+            }
+
+            $('li').click(function() {
+                var page = $(this).attr('title');
+                swapPage(page);
+                //$('#main').load('./content.php');
             });
             
         });
