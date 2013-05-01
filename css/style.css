@@ -2,21 +2,17 @@ body {
     background-color: #222222;
     color: #DAA520;
     font-family: inconsolata, serif;
+    padding-bottom: 500px;
     }
 #header {
     width: 100%;
     overflow: hidden;
-    /*border-style: solid;
-    border-color: #DAA520;*/
-    /*border-right-width: 5px;*/
-    /*border-bottom-width: 5px;*/
     }
 #h-left {
     width: 20%;
     height: 7em;
     float: left;
     border-style: none;
-    /*border-color: #DAA520;*/
     border-bottom-width: 1.5em;
     }
 #h-center {
@@ -35,9 +31,7 @@ body {
     color: #DAA520;
     }
 h1 {
-    /*position: absolute;*/
     font-size: 3em;
-    /*left: 25%;*/
     }
 #h-right {
     width: 15%;
@@ -61,10 +55,6 @@ sup {
     text-indent: 1.5em;
     margin-top: -1.5em;
     border-top: 0em;
-    /*border-style: solid;
-    border-color: #DAA520;
-    border-right-width: 5px;
-    border-bottom-width: 5px;*/
     }
 #nav-button {
     position:relative;
@@ -74,7 +64,6 @@ sup {
     line-height: 1.5em;
     border-style: solid;
     border-color: #DAA520;
-    /*border-bottom-width: 1px;*/
     list-style-type: none;
     }
 #nav-button:hover {
@@ -95,7 +84,6 @@ sup {
     border-style: solid;
     border-color: #DAA520;
     border-right-width: 2px;
-    /*border-bottom-width: 1px;*/
     }
 #nav li:hover {
     background: #DAA520;
@@ -113,7 +101,6 @@ sup {
     }
 .oversize {
     font-size: .9em;
-    /*font-weight: bold;*/
     }
 #main {
     position: absolute;
@@ -164,4 +151,7 @@ h3 {
     }
 input[name=email] {
     height: 1.5em;
+    }
+.bottom {
+    height: 3em;
     }

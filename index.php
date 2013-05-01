@@ -41,26 +41,7 @@
                 <div id="nav-button"><a class="nav-link" href="index.php">
                     <li>Navigation &#x25BC;</li>
                 </a></div>
-                <!-- research fieldset legend -->
-                <!-- highlight current item -->
                 <ul id="nav-menu">
-                    <!--<li class="oversize">The Reddit Picture Frame</li>
-                    <li>Rmas</li>
-                    <li>Socially Awkward Mag</li>
-                    <li>Skull Society</li>
-                    <li>Contact</li>
-                    <li>About</li>
-                    <li>What's kth?</li>
-                    <li>&nbsp;</li>
-                    <li>TI-Diablo</li>
-                    <li>volunteer</li>
-                    <li>freelance</li>
-                    <li>work history</li>
-                    <li>studies</li>
-                    <li>languages</li>
-                    <li>linux/sysadmin exp</li>
-                    <li>independent projects</li>-->
-                    <!--<li onclick="place_content('projects')">Projects</li>-->
                     <a class="nav-link" href="?page=projects"><li>Projects</li></a>
                     <a class="nav-link" href="?page=sample_code"><li>Sample Code</li></a>
                     <a class="nav-link" href="?page=contact"><li>Contact</li></a>
@@ -68,7 +49,6 @@
                 </ul>
             </div>
             <div id="main">
-                <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. -->
                 <?php 
                     $page = $_REQUEST['page'];
                     switch ($page) {

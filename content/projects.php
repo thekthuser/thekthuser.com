@@ -8,7 +8,7 @@
 
 <div class="content">
 <h2>Rem&#225;s</h2>
-<p>Rem&#225;s is a non-profit I have been working with for a while. I have contributed to all aspects of the site; from systems administration to the back and frontend development.</p>
+<p>Rem&#225;s is a non-profit I have been working with for a while. I have contributed to all aspects of the site, from systems administration to the back and frontend development.</p>
 <p>Rem&#225;s' mission is to help immigrants send money home easily and efficiently. We are nearing launch and will begin by focusing on zip code 11220 in Brooklyn, NY.</p>
 <div class="link">~ <a href="http://sendremas.org/">link</a></div>
 </div>
@@ -30,3 +30,4 @@
 <p>This is an ongoing project. TrickleUp was one of several non-profits who participated in the Helping Hacks hackathon in August 2012. A team of originally five people worked together to improve TrickleUp's internal data collection and visualization system. We received the "best technical solution" award. Progress is stalled waiting for more input from TrickleUp.</p>
 <div class="link">~ <a href="http://trickleup.org/">link</a></div>
 </div>
+<div class="bottom"></div>
