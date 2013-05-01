@@ -3,8 +3,10 @@
     <p>A fun puzzle someone sent me. I wrote the solution in Python. Given a sequence of blocks of random length, arrange them into columns without changing their order such that the sum of the differences between each column length and the average length of all columns (the balance delta) is minimized. A zip containing source code and sample input are provided. Input must be formatted as the sample is - with one block's size per line.</p>
     <div class="link">
         ~ <a href="downloads/blocks.zip">zip</a>
-        ~ <a href="images/blocks_example.jpg">example image</a>
+        ~ <span onclick="$('.image').toggle()">example image</span>
     </div>
+        <img class="image" src="images/blocks_example.jpg"
+        onclick="$('.image').hide()"> </img>
 </div>
 
 <div class="content">
@@ -17,7 +19,7 @@
 
 <div class="content">
     <h2>FORMULAS</h2>
-    <p>I cut my teeth automating formulas as they were introduced during math classes. This program is a collection of several of those. There are ASDFASDF listed and they are mostly Trigonometry and Pre-Calculus level mathematics.</p>
+    <p>I cut my teeth automating formulas as they were introduced during math classes. This program is a collection of several of those. There are 9 listed and they are mostly Trigonometry and Pre-Calculus level mathematics.</p>
     <div class="link">~ <a href="downloads/FORMULAS.zip">zip</a></div>
 </div>
 

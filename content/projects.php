@@ -1,6 +1,6 @@
 <div class="content">
 <h2>The Reddit Picture Frame</h2>
-<p>The idea here was to find a use for extra displays. The frame will look at the top 100 posts in r/all, pick those that link directly to an imae, and display them in a random order. After getting to the end of that list (usually between 40 and 50 minutes), it will look at the new top 100 posts and start over.</p>
+<p>The idea here was to find a use for extra displays. The frame will look at the top 100 posts in r/all, pick those that link directly to an image, and display them in a random order. After getting to the end of that list (usually between 40 and 50 minutes), it will look at the new top 100 posts and start over.</p>
 <p>If you have a spare display, pull this up and leave it running. You will see something new every minute.
 <p>To keep bandwidth usage to an absolute minimum The Reddit Picture Frame was written entirely in Javascript. I do not keep a copy of recent images on the server.</p>
 <div class="link">~ <a href="rpics/frame.html">link</a></div>
@@ -27,6 +27,6 @@
 
 <div class="content">
 <h2>TrickleUp</h2>
-<p>This is an ongoing project. TrickleUp was one of several non-profits who participated in the Helping Hacks hackathon in August. A team of originally five people worked together to improve TrickleUp's internal data collection and visualization system. We received the "best technical solution" award. Progress is stalled waiting for more input from TrickleUp.</p>
+<p>This is an ongoing project. TrickleUp was one of several non-profits who participated in the Helping Hacks hackathon in August 2012. A team of originally five people worked together to improve TrickleUp's internal data collection and visualization system. We received the "best technical solution" award. Progress is stalled waiting for more input from TrickleUp.</p>
 <div class="link">~ <a href="http://trickleup.org/">link</a></div>
 </div>
