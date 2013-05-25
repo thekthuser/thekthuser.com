@@ -11,14 +11,14 @@
         $subject = "Message from " . $from;
         $body = $_REQUEST['body'];
 
-        $host = "ssl://smtp.gmail.com";
+        /**$host = "ssl://smtp.gmail.com";
         $port = "465";
         $username = "thekthuser@thekthuser.com";
-        $password = "YDjfC7LY6wow";
+        $password = "YDjfC7LY6wow";**/
         
         if (filter_var($from, FILTER_VALIDATE_EMAIL)) {
             $display = False;
-            $headers1 = array(
+            /**$headers1 = array(
                 'From' => $from,
                 'To' => $copy1,
                 'Subject' => $subject,
@@ -41,9 +41,9 @@
                     'username' => $username,
                     'password' => $password
                 )
-            );
-            $mail = $smtp->send($copy1, $headers1, $body);
-            $mail = $smtp->send($copy2, $headers2, $body);
+            );**/
+            //$mail = $smtp->send($copy1, $headers1, $body);
+            //$mail = $smtp->send($copy2, $headers2, $body);
             if (PEAR::isError($mail)) {
                 //print $mail->getMessage();
                 print "<p>An error has occurred, please try again.<br /><p>";
