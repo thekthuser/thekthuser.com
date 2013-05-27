@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>r/pics/frame</title>
+        <link rel="stylesheet" type="text/css" href="reset.css"></link>
+        <link rel="stylesheet" type="text/css" href="styles.css"></link>
+        <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="http://fgnass.github.com/spin.js/dist/spin.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                entries = [];
+                current = 0;
+                //bwidth = window.innerWidth;
+                //bheight = window.innerHeight - $('#controls').outerHeight(true) - $('#url').outerHeight(true) - 14;
+                pause = false;
+
+                var opts = {
+                    lines:9,
+                    speed:0.7,
+                    color: '#A0A0A0'
+                };
+                var target = document.getElementById('spinner');
+                var spinner = new Spinner(opts).spin(target);
+
+                place([], "loading");
+                scrape(entries);
+
+                setInterval(function() {
+                    if (pause != true) {
+                        if (current >= entries.length) {
+                            place([], "loading");
+                            current = 0;
+                            entries = [];
+                            scrape(entries);
+                        } else {
+                            place(entries, current);
+                            current++;
+                        }
+                    }
+                }, 6000);//60000);
+
+                $('#pause').click( function() {
+                    if (pause == false) {
+                        pause = true;
+                        $('#pause').attr('src', 'pause_dcdcdc.png');
+                    } else {
+                        pause = false;
+                        $('#pause').attr('src', 'pause_a0a0a0.png');
+                    }
+                });
+
+                $('#next').click( function() {
+                    if (current != "loading") {
+                        if (current >= entries.length) {
+                            place(entries, 0);
+                            current = 1;
+                        } else {
+                            place(entries, current);
+                            current++;
+                        }
+                    }
+                });
+
+                $('#previous').click( function() {
+                    if (current != "loading") {
+                        if (current <= 1) {
+                            place(entries, entries.length - 1);
+                            current = entries.length;
+                        } else {
+                            current--;
+                            place(entries, current - 1);
+                        }
+                    }
+                });
+            });
+            //var bwidth;
+            //var bheight;
+            var current;
+            var pause;
+            var entries;
+
+            function scrape(entries) {
+                var directLink = new RegExp(
+                '\.(jpg|jpeg|png|bmp|gif)$');
+                var count = 0;
+                var isNSFW = new RegExp('nsfw');
+                if (isNSFW.test(window.location.href)) 
+                { var nsfw = true; } else { var nsfw = false; }
+
+                $.getJSON('http://www.reddit.com/r/all.json?jsonp=?&limit=100',
+                function(data) {
+                    $.each(data.data.children, function(i, item) {
+                        if((directLink.test(item.data.url)) && 
+                        (((nsfw == false) && (item.data.over_18 == false)) ||
+                        (nsfw == true))) {
+                            entries[count] = [];
+                            entries[count]['title'] = item.data.title;
+                            entries[count]['url'] = item.data.url;
+                            entries[count]['permalink'] = item.data.permalink;
+                            entries[count]['order'] = Math.floor(Math.random() * 100);
+    //determine #image width and height here
+                            //entries[count]['image'] = new Image();
+                            //entries[count]['image'].src = item.data.url;
+                            //$(entries[count]['image']).load(function() {
+                                /*var iwidth = this.width;
+                                var iheight = this.height;
+                                var nwidth = this.width;
+                                var nheight = this.height;
+                                if (iwidth > bwidth) {
+                                    nheight = parseInt((iheight / (iwidth / bwidth)));
+                                    nwidth = bwidth;
+                                }
+                                if (iheight > bheight) {
+                                    nwidth = parseInt((iwidth / (iheight / bheight)));
+                                    nheight = bheight;
+                                }
+                                this.width = nwidth;
+                                this.height = nheight;*/
+                            //});
+                            //$('#image').html('src', entries[count]['url']);
+                            count++;
+                        }
+                    });
+                entries.sort(function(a, b) { return a.order - b.order; });
+                place(entries, 0);
+                });
+            }
+
+            function place(entries, current) {
+                if (current == "loading") {
+                    $('#url').attr('href', "#").text("This will take a minute (and last an hour).");
+                    $('#controls').hide();
+                    $('#image').hide();
+                    $('#spinner').show();
+
+                } else {
+                    $('#spinner').hide();
+                    $('#controls').show();
+                    $('#image').show();
+                    $('#num_previous').html(current);
+                    $('#num_next').html(entries.length - current - 1);
+                    //$('#image').width(entries[current].image.width).height(entries[current].image.height).attr('src', entries[current].image.src);
+    //set #image max-width/width and height here
+                    $('#image').attr('src', entries[current]['url']);
+
+                    $('#url').attr('href', "http://www.reddit.com" + 
+                    entries[current].permalink).html(entries[current].title);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <span id="controls"><img id="previous" src="previous_a0a0a0.png"></img><span class="num" id="num_previous">#</span> <img id="pause" src="pause_a0a0a0.png"></img> <span class="num" id="num_next">#</span><img id="next" src="next_a0a0a0.png"</img></span>
+            <a id="url"></a>
+            <img id="image" style="max-width: 100%; height: auto;"></img>
+            <span id="spinner"></span>
+        </div>
+    </body>
+</html>
