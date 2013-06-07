@@ -14,8 +14,6 @@
                 current = 0;
                 //bwidth = window.innerWidth;
                 //bheight = window.innerHeight - $('#controls').outerHeight(true) - $('#url').outerHeight(true) - 14;
-                bWidth = window.innerWidth;
-                bHeight = window.innerHeight - $('#controls').outerHeight(true) - $('#url').outerHeight(true);
                 pause = false;
 
                 var opts = {
@@ -77,10 +75,9 @@
                     }
                 });
             });
-            //var bWidth = window.innerWidth;
-            //var bHeight = window.innerHeight;
-            var bWidth;
-            var bHeight;
+            //var iWidth = window.innerWidth;
+            //var iHeight = window.innerHeight - $('#controls').outerHeight(true) - $('#url').outerHeight(true) - 14;
+            //var iHeight = window.innerHeight;
             var current;
             var pause;
             var entries;
@@ -104,16 +101,9 @@
                             entries[count]['url'] = item.data.url;
                             entries[count]['permalink'] = item.data.permalink;
                             entries[count]['order'] = Math.floor(Math.random() * 100);
-                            entries[count]['image'] = new Image();
-                            //entries[count]['image'].src = item.data.url;
-                            entries[count]['image'].src = entries[count]['url'];
-                            //dont bother with .onLoad
-                            //entries[count]['image'].onLoad=loadTest(count);
     //determine #image width and height here
-                            /*entries[count]['image'] = new Image();
-                            entries[count]['image'].src = item.data.url;
-                            entries[count]['width'] = entries[count]['image'].naturalWidth;
-                            entries[count]['height'] = entries[count]['image'].naturalHeight;*/
+                            //entries[count]['image'] = new Image();
+                            //entries[count]['image'].src = item.data.url;
                             //$(entries[count]['image']).load(function() {
                                 /*var iwidth = this.width;
                                 var iheight = this.height;
@@ -138,111 +128,78 @@
                 place(entries, 0);
                 });
             }
-            function loadTest(current) { //alert(entries[current]['title']); }
-                width = entries[current]['image'].naturalWidth;
-                height = entries[current]['image'].naturalHeight;
-                ratio = width / height;
-                if ((width > bWidth) || (height > bHeight)) {
-                    if (ratio > 1.0) {
-                        entries[current]['image']['width'] = bWidth;
-                        entries[current]['image']['height'] = bHeight;//(height * (bWidth / width));
-                    } else {
-                        entries[current]['image']['height']= bHeight;
-                        entries[current]['image']['width'] = (width * (bHeight / height));
-                    }
-                } else {
-                    entries[current]['image']['width'] = 'auto';
-                    entries[current]['image']['height'] = bHeight;//'auto';
-                }
-            }
-                
 
             function place(entries, current) {
                 if (current == "loading") {
                     //$('#url').attr('href', "#").text("loading");
                     $('#controls').hide();
-                    $('#url').hide();
                     $('#image').hide();
                     $('#spinner').show();
 
                 } else {
                     $('#spinner').hide();
                     $('#controls').show();
-                    $('#url').show();
                     $('#image').show();
                     $('#num_previous').html(current);
                     $('#num_next').html(entries.length - current - 1);
                     //$('#image').width(entries[current].image.width).height(entries[current].image.height).attr('src', entries[current].image.src);
     //set #image max-width/width and height here
+            $('#image').width('auto');
+            $('#image').height('auto');
+                    $('#image').attr('src', entries[current]['url']);
 
-    //var iWidth;
-    //var iHeight;
-    //$('#image').width('auto');
-    //$('#image').height('auto');
-                    //$('#image').attr('src', entries[current]['url']);//.load(function() { /*iWidth = this.width; iHeight = this.height*/resize(this.width, this.height); } );
-                    /*alert(entries[current]['width']);
-                    resize(entries[current]['width'], entries[current]['height']);
-                    //resize($('#image').width(), $('#image').height());
-*/
-                    $('#image').attr('src', entries[current]['image'].src);
-                    //$('#size').html(entries[current]['image'].naturalWidth);
-                    /*$('#image').width(40);
-                    $('#image').height(400);*/
-    testResize(
-        entries[current]['image'].naturalWidth, 
-        entries[current]['image'].naturalHeight);
-    //$('#image').width(entries[current]['image']['width']);
-    //$('#image').height(entries[current]['image']['height']);
-                        //entries[current]['image']['width'],
-                        //entries[current]['image']['height']);
-                    //MAYBE CREATE MULTIPLE IMAGE IDS AND SWAP THEM OUT
-                    //MAYBE CREATE MULTIPLE IMAGE IDS AND SWAP THEM OUT
-                    //MAYBE CREATE MULTIPLE IMAGE IDS AND SWAP THEM OUT
-                    //MAYBE CREATE MULTIPLE IMAGE IDS AND SWAP THEM OUT
                     $('#url').attr('href', "http://www.reddit.com" + 
                     entries[current].permalink).html(entries[current].title);
-                }
-            }
-
-            function testResize(width, height) {
-                //bWidth = window.innerWidth;
-                //bHeight = window.innerHeight - $('#controls').outerHeight(true) - $('#url').outerHeight(true);
-                //$('#size').html(bWidth + ' ' + bHeight);
-                ratio = width / height;
-                if ((width > bWidth) || (height > bHeight)) {
-                    if (ratio > 1.0) {
-                        $('#image').width(bWidth);
-                        $('#image').height(height * (bWidth / width));
-                    } else {
-                        $('#image').height(bHeight);
-                        $('#image').width(width * (bHeight / height));
-                    }
-                } else {
-                    $('#image').width(width);
-                    $('#image').height(height);
+                    resize($('#image').width(), $('#image').height());
                 }
             }
 
             function resize(width, height) {
-                console.log("img", width, height);
-                bHeight = bHeight - $('#controls').outerHeight() - $('#url').outerHeight();
-                console.log("brow", bWidth, bHeight);
-                if ((width > bWidth) || (height > bHeight)) {
-                    $('#image').width(200);
-                    $('#image').height(200);
+                //iWidth = iWidth;
+                //iHeight = iHeight - $('#controls').height(); - $('#url').height();
+                iWidth = window.innerWidth;
+                iHeight = window.innerHeight - $('#controls').outerHeight() - $('#url').outerHeight();
+                //console.log("iW " + iWidth + ": iH " + iHeight);
+                //console.log("w " + width + ": h " + height);
+
+                ratio = (width / height);
+                newWidth = width;
+                newHeight = height;
+            if ((width > iWidth) || (height > iHeight)) {
+            //alert("to be changed");
+                if (ratio > 1.0) {
+                //console.log("wider");
+                //alert("wider");
+                    //alert(innerWidth + " " + innerHeight);
+                    /*$('#image').attr('width', 'auto');
+                    $('#image').attr('height', 'auto');
+                    $('#image').attr('max-width', window.innerWidth);*/
+                    newWidth = iWidth;
+                    //newWidth = (width * (innerWidth / width));
+                    newHeight = (height * (iWidth / width));
                 } else {
-                    $('#image').width(width);
-                    $('#image').height(height);
+                //console.log("taller");
+                //alert("taller");
+                    //alert(innerWidth + " " + innerHeight);
+                    /*$('#image').attr('height', 'auto');
+                    $('#image').attr('width', 'auto');
+                    $('#image').attr('max-height', window.innerHeight);*/
+                    newHeight = iHeight;
+                    //newHeight = (height * (innerHeight / height));
+                    newWidth = (width * (iHeight / height));
                 }
+            }
+            //console.log("nW " + newWidth + " :nH " + newHeight);
+            $('#image').width(newWidth);
+            $('#image').height(newHeight);
             }
         </script>
     </head>
     <body>
         <div id="container">
             <span id="controls"><img id="previous" src="previous_a0a0a0.png"></img><span class="num" id="num_previous">#</span> <img id="pause" src="pause_a0a0a0.png"></img> <span class="num" id="num_next">#</span><img id="next" src="next_a0a0a0.png"</img></span>
-            <a id="url">loading</a>
-            <img id="image" ></img>
-            <p id="size"></p>
+            <a id="url"></a>
+            <img id="image"></img>
             <span id="spinner"></span>
         </div>
     </body>
