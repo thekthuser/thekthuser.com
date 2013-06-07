@@ -7,13 +7,12 @@
         src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
         </script>
         <script type="text/javascript" src="http://fgnass.github.com/spin.js/dist/spin.min.js"></script>
+<!-- To toggle nsfw filter off add ?nsfw to the end of the url -->
 
         <script type="text/javascript">
             $(document).ready(function() {
                 entries = [];
                 current = 0;
-                //bwidth = window.innerWidth;
-                //bheight = window.innerHeight - $('#controls').outerHeight(true) - $('#url').outerHeight(true) - 14;
                 bWidth = window.innerWidth;
                 bHeight = window.innerHeight - $('#controls').outerHeight(true) - $('#url').outerHeight(true);
                 pause = false;
@@ -77,8 +76,6 @@
                     }
                 });
             });
-            //var bWidth = window.innerWidth;
-            //var bHeight = window.innerHeight;
             var bWidth;
             var bHeight;
             var current;
@@ -103,63 +100,26 @@
                             entries[count]['title'] = item.data.title;
                             entries[count]['url'] = item.data.url;
                             entries[count]['permalink'] = item.data.permalink;
-                            entries[count]['order'] = Math.floor(Math.random() * 100);
+                            entries[count]['order'] = 
+                                Math.floor(Math.random() * 100);
                             entries[count]['image'] = new Image();
-                            //entries[count]['image'].src = item.data.url;
                             entries[count]['image'].src = entries[count]['url'];
-                            //dont bother with .onLoad
-                            //entries[count]['image'].onLoad=loadTest(count);
-    //determine #image width and height here
-                            /*entries[count]['image'] = new Image();
-                            entries[count]['image'].src = item.data.url;
-                            entries[count]['width'] = entries[count]['image'].naturalWidth;
-                            entries[count]['height'] = entries[count]['image'].naturalHeight;*/
-                            //$(entries[count]['image']).load(function() {
-                                /*var iwidth = this.width;
-                                var iheight = this.height;
-                                var nwidth = this.width;
-                                var nheight = this.height;
-                                if (iwidth > bwidth) {
-                                    nheight = parseInt((iheight / (iwidth / bwidth)));
-                                    nwidth = bwidth;
-                                }
-                                if (iheight > bheight) {
-                                    nwidth = parseInt((iwidth / (iheight / bheight)));
-                                    nheight = bheight;
-                                }
-                                this.width = nwidth;
-                                this.height = nheight;*/
-                            //});
-                            //$('#image').html('src', entries[count]['url']);
                             count++;
                         }
                     });
-                entries.sort(function(a, b) { return a.order - b.order; });
-                place(entries, 0);
+                    entries.sort(function(a, b) { return a.order - b.order; });
+                    while (True) {
+                        {}
+                        if (entries[0]['image'].complete) {
+                            place(entries, 0);
+                            break;
+                        }
+                    }
                 });
             }
-            function loadTest(current) { //alert(entries[current]['title']); }
-                width = entries[current]['image'].naturalWidth;
-                height = entries[current]['image'].naturalHeight;
-                ratio = width / height;
-                if ((width > bWidth) || (height > bHeight)) {
-                    if (ratio > 1.0) {
-                        entries[current]['image']['width'] = bWidth;
-                        entries[current]['image']['height'] = bHeight;//(height * (bWidth / width));
-                    } else {
-                        entries[current]['image']['height']= bHeight;
-                        entries[current]['image']['width'] = (width * (bHeight / height));
-                    }
-                } else {
-                    entries[current]['image']['width'] = 'auto';
-                    entries[current]['image']['height'] = bHeight;//'auto';
-                }
-            }
-                
 
             function place(entries, current) {
                 if (current == "loading") {
-                    //$('#url').attr('href', "#").text("loading");
                     $('#controls').hide();
                     $('#url').hide();
                     $('#image').hide();
@@ -172,42 +132,16 @@
                     $('#image').show();
                     $('#num_previous').html(current);
                     $('#num_next').html(entries.length - current - 1);
-                    //$('#image').width(entries[current].image.width).height(entries[current].image.height).attr('src', entries[current].image.src);
-    //set #image max-width/width and height here
-
-    //var iWidth;
-    //var iHeight;
-    //$('#image').width('auto');
-    //$('#image').height('auto');
-                    //$('#image').attr('src', entries[current]['url']);//.load(function() { /*iWidth = this.width; iHeight = this.height*/resize(this.width, this.height); } );
-                    /*alert(entries[current]['width']);
-                    resize(entries[current]['width'], entries[current]['height']);
-                    //resize($('#image').width(), $('#image').height());
-*/
                     $('#image').attr('src', entries[current]['image'].src);
-                    //$('#size').html(entries[current]['image'].naturalWidth);
-                    /*$('#image').width(40);
-                    $('#image').height(400);*/
-    testResize(
-        entries[current]['image'].naturalWidth, 
-        entries[current]['image'].naturalHeight);
-    //$('#image').width(entries[current]['image']['width']);
-    //$('#image').height(entries[current]['image']['height']);
-                        //entries[current]['image']['width'],
-                        //entries[current]['image']['height']);
-                    //MAYBE CREATE MULTIPLE IMAGE IDS AND SWAP THEM OUT
-                    //MAYBE CREATE MULTIPLE IMAGE IDS AND SWAP THEM OUT
-                    //MAYBE CREATE MULTIPLE IMAGE IDS AND SWAP THEM OUT
-                    //MAYBE CREATE MULTIPLE IMAGE IDS AND SWAP THEM OUT
+                    resize(
+                        entries[current]['image'].naturalWidth, 
+                        entries[current]['image'].naturalHeight);
                     $('#url').attr('href', "http://www.reddit.com" + 
                     entries[current].permalink).html(entries[current].title);
                 }
             }
 
-            function testResize(width, height) {
-                //bWidth = window.innerWidth;
-                //bHeight = window.innerHeight - $('#controls').outerHeight(true) - $('#url').outerHeight(true);
-                //$('#size').html(bWidth + ' ' + bHeight);
+            function resize(width, height) {
                 ratio = width / height;
                 if ((width > bWidth) || (height > bHeight)) {
                     if (ratio > 1.0) {
@@ -222,25 +156,12 @@
                     $('#image').height(height);
                 }
             }
-
-            function resize(width, height) {
-                console.log("img", width, height);
-                bHeight = bHeight - $('#controls').outerHeight() - $('#url').outerHeight();
-                console.log("brow", bWidth, bHeight);
-                if ((width > bWidth) || (height > bHeight)) {
-                    $('#image').width(200);
-                    $('#image').height(200);
-                } else {
-                    $('#image').width(width);
-                    $('#image').height(height);
-                }
-            }
         </script>
     </head>
     <body>
         <div id="container">
             <span id="controls"><img id="previous" src="previous_a0a0a0.png"></img><span class="num" id="num_previous">#</span> <img id="pause" src="pause_a0a0a0.png"></img> <span class="num" id="num_next">#</span><img id="next" src="next_a0a0a0.png"</img></span>
-            <a id="url">loading</a>
+            <a id="url"><u>loading</u></a>
             <img id="image" ></img>
             <p id="size"></p>
             <span id="spinner"></span>
