@@ -11,6 +11,7 @@
 
         <script type="text/javascript">
             $(document).ready(function() {
+            //console.log("enter ready");
                 entries = [];
                 current = 0;
                 bWidth = window.innerWidth;
@@ -83,6 +84,7 @@
             var entries;
 
             function scrape(entries) {
+            //console.log("enter scrape");
                 var directLink = new RegExp(
                 '\.(jpg|jpeg|png|bmp|gif)$');
                 var count = 0;
@@ -92,7 +94,9 @@
 
                 $.getJSON('http://www.reddit.com/r/all.json?jsonp=?&limit=100',
                 function(data) {
+                //console.log("enter getJSON");
                     $.each(data.data.children, function(i, item) {
+                    //console.log("enter each");
                         if((directLink.test(item.data.url)) && 
                         (((nsfw == false) && (item.data.over_18 == false)) ||
                         (nsfw == true))) {
@@ -105,17 +109,20 @@
                             entries[count]['image'] = new Image();
                             entries[count]['image'].src = entries[count]['url'];
                             count++;
+                            //console.log("loop " + count);
                         }
                     });
                     entries.sort(function(a, b) { return a.order - b.order; });
-                    while (true) {
+                    /*while (true) {
                         {}
                         if (entries[0]['image'].complete) {
                             place(entries, 0);
                             break;
                         }
-                    }
+                    }*/
+                //console.log("exit getJSON");
                 });
+            //console.log("exit scrape");
             }
 
             function place(entries, current) {

@@ -64,6 +64,9 @@
                         case "about":
                             include("content/about.php");
                             break;
+			case "vhx":
+				include("content/vhx.php");
+				break;
                         default:
                             echo '';
                             break;
