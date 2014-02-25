@@ -1,8 +1,8 @@
 <html>
     <head>
-    <link href="css/reset.css" type="text/css" rel="stylesheet" />
-    <link href="css/style.css" types="text/css" rel="stylesheet" />
-    <link href="images/kth24.ico" type="image/png" rel="icon" />
+    <link href="../css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="../css/style.css" types="text/css" rel="stylesheet" />
+    <link href="../images/kth24.ico" type="image/png" rel="icon" />
     <script src="http://use.edgefonts.net/inconsolata.js"></script>
     <script type="text/javascript"
     src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
@@ -33,21 +33,22 @@
                 //alert(page);
                 switch(page) {
                     case 'projects':
-                        $('#main').load('content/projects.php');
+                        $('#main').load('../content/projects.php');
+                        <?php $dir = "../"; ?>
                         <?php //$_SESSION['page'] = "projects"; ?>
                         break;
 
                     case 'sample_code':
-                        $('#main').load('content/sample_code.php');
+                        $('#main').load('../content/sample_code.php');
                         break;
 
                     case 'contact':
-                        $('#main').load('content/contact.php', 
+                        $('#main').load('../content/contact.php', 
                         {'email': '<?php echo $_REQUEST['email']; ?>'});
                         break;
 
                     case 'about':
-                        $('#main').load('content/about.php');
+                        $('#main').load('../content/about.php');
                         break;
                     
                     default:
