@@ -31,7 +31,7 @@
             <div id="header">
                 <!--<div id="h-left">&nbsp;</div>-->
                 <div id="h-center"><h1>
-                    <a href=''><span id="title">
+                    <a href='/'><span id="title">
                         the k<sup>th</sup><span id="title2"> user</span>
                     </span></a>
                 </h1></div>
