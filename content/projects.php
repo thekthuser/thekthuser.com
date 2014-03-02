@@ -21,7 +21,8 @@
 
 <div class="content">
 <h2>The Skull Society</h2>
-<p>This was a weekend project for a friend. It was created in phpBB and customized to his requests.
+<p>This was a weekend project for a friend. It was created in phpBB and customized to his requests.</p>
+<p>Note: The site is no longer live. The owner neglected to reregister the domain.</p>
 <div class="link">~ <a href="http://the-skull-society.net/">link</a></div>
 </div>
 

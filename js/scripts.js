@@ -30,10 +30,10 @@ $(document).ready(function() {
     $(document).on("click", "#ajax_toggle", function() {
         if ($.cookie('mode') == 'html') {
             $.cookie('mode', 'ajax', {expires: 7});
-            window.location = "newindex.php";
+            window.location = "index.php";
         } else {
             $.cookie('mode', 'html', {expires: 7});
-            window.location = "newindex.php";
+            window.location = "index.php";
         }
     });
 
