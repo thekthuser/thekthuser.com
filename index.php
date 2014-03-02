@@ -12,6 +12,7 @@
             <title>the kth user</title>
     </head>
     <body>
+    <?php include_once("analyticstracking.php"); ?>
         <div id="container">
             <div id="header">
                 <div id="h-center"><h1>
