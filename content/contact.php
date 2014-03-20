@@ -45,7 +45,7 @@
             $mail = $smtp->send($copy1, $headers1, $body);
             //$mail = $smtp->send($copy2, $headers2, $body);
             if (PEAR::isError($mail)) {
-                print $mail->getMessage();
+                //print $mail->getMessage();
                 print "<p>An error has occurred, please try again.<br /><p>";
             } else {
                 print "<p>Your message has been sent.</p>";
