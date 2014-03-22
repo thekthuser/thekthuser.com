@@ -6,46 +6,16 @@
 
     if (isset($_REQUEST['email'])) {
         $copy1 = "<thekthuser@thekthuser.com>";
-        $copy2 = "<christopher.mv.peters@gmail.com>";
+        //$copy2 = "<christopher.mv.peters@gmail.com>";
         $from = $_REQUEST['email'];
         $subject = "Message from " . $from;
         $body = $_REQUEST['body'];
 
-        /**$host = "ssl://smtp.gmail.com";
-        $port = "465";
-        $username = "thekthuser@thekthuser.com";
-        $password = "YDjfC7LY6wow";**/
-        
         if (filter_var($from, FILTER_VALIDATE_EMAIL)) {
             $display = False;
-            /**$headers1 = array(
-                'From' => $from,
-                'To' => $copy1,
-                'Subject' => $subject,
-                'Reply-To' => $from,
-                'Content-Type' => 'text/plain; charset=ISO-2022-JP',
-            );
-            $headers2 = array(
-                'From' => $from,
-                'To' => $copy2,
-                'Subject' => $subject,
-                'Reply-To' => $from,
-                'Content-Type' => 'text/plain; charset=ISO-2022-JP',
-            );
-
-            $smtp = Mail::factory('smtp',
-                array(
-                    'host' => $host,
-                    'port' => $port,
-                    'auth' => True,
-                    'username' => $username,
-                    'password' => $password
-                )
-            );**/
-            //$mail = $smtp->send($copy1, $headers1, $body);
-            //$mail = $smtp->send($copy2, $headers2, $body);
-            if (PEAR::isError($mail)) {
-                //print $mail->getMessage();
+            $mail = mail($copy1, $subject, $body);
+            //$mail = mail($copy2, $subject, $body);
+            if (!$mail) {
                 print "<p>An error has occurred, please try again.<br /><p>";
             } else {
                 print "<p>Your message has been sent.</p>";
