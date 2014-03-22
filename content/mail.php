@@ -6,19 +6,16 @@
 
     if (isset($_REQUEST['email'])) {
         $copy1 = "<thekthuser@thekthuser.com>";
-        $copy2 = "<christopher.mv.peters@gmail.com>";
+        //$copy2 = "<christopher.mv.peters@gmail.com>";
         $from = $_REQUEST['email'];
         $subject = "Message from " . $from;
         $body = $_REQUEST['body'];
 
         if (filter_var($from, FILTER_VALIDATE_EMAIL)) {
             $display = False;
-            //$mail = $smtp->send($copy1, $headers1, $body);
-            //$mail = $smtp->send($copy2, $headers2, $body);
             $mail = mail($copy1, $subject, $body);
-            $mail = mail($copy2, $subject, $body);
-            if (!$mail) {//(PEAR::isError($mail)) {
-                //print $mail->getMessage();
+            //$mail = mail($copy2, $subject, $body);
+            if (!$mail) {
                 print "<p>An error has occurred, please try again.<br /><p>";
             } else {
                 print "<p>Your message has been sent.</p>";
