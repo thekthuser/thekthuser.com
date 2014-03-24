@@ -25,6 +25,7 @@ $(document).ready(function() {
         }
     });
 
+
     //ajax_mode.php
     //$('#ajax_toggle').click(function() { 
     $(document).on("click", "#ajax_toggle", function() {
@@ -37,4 +38,23 @@ $(document).ready(function() {
         }
     });
 
+
+    //contact.php
+    //$('#contact_button').click(function() {
+    $(document).on("click", "#contact_button", function() {
+        var email = $('#email').val();
+        var body = $('#body').val();
+        $.ajax({
+            type: "POST",
+            url: "content/sendmail.php",
+            data: {
+                email: email,
+                body: body
+            },
+            success: function(response) {
+                $('.content').html(response);
+            }
+        });
+        return false;
+    });
 });

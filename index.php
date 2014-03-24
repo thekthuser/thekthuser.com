@@ -66,8 +66,27 @@
                             $('#main').load('content/ajax_mode.php');
                             break;
                         case 'contact':
-                            $('#main').load('content/contact.php', 
-                            {'email': '<?php echo $_REQUEST['email']; ?>'});
+                            $('#main').load('content/contact.php');
+                            //{'email': '<?php echo $_REQUEST['email']; ?>'});
+
+        /*console.log('click contact');
+                            <?php if (!isset($_REQUEST['email'])) { ?>
+        console.log('no email');
+                                $('#main').load('content/contact.php');
+                            <?php } else { ?>
+                                $('#main').load('content/contact.php',
+                                {'email': '<?php echo $_REQUEST['email']; ?>'});
+        console.log('email');
+                                <?php }; ?>*/
+/*console.log('click contact');
+<?php if (isset($_REQUEST['email']) && ($_REQUEST['email'] != '')) { ?>
+    $('#main').load('content/contact.php', {'email': '<?php echo $_REQUEST['email']; ?>'});
+    console.log('email');
+<?php } else { ?>
+    $('#main').load('content/contact.php');
+    console.log('no email');
+<?php } ?>*/
+                                
                             break;
                         case 'about':
                             $('#main').load('content/about.php');
