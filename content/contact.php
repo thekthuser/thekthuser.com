@@ -16,6 +16,7 @@
        
         <input type="submit" id="contact_button" value="Submit" />
     </form>
+    <div id="invalid"></div>
 
 </div>
 <div class="bottom"></div>

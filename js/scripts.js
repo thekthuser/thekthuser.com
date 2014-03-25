@@ -51,8 +51,21 @@ $(document).ready(function() {
                 email: email,
                 body: body
             },
-            success: function(response) {
-                $('.content').html(response);
+            success: function(status) {
+                switch(status) {
+                    case "sent":
+                        $('.content').html(
+                        "<p>Your message has been sent.</p>");
+                        break;
+                    case "invalid":
+                        $('#invalid').html(
+                        "<p>A valid email address is required.</p>");
+                        break;
+                    default:
+                    //is an error
+                        $('.content').html(
+                        "<p>An error has occurred, please try again.<br /></p>");
+                }
             }
         });
         return false;
