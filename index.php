@@ -56,33 +56,27 @@
                     switch(page) {
                         case 'projects':
                             $('#main').load('content/projects.php');
-                            _gaq.push(['_trackEvent', 'Ajax_mode', 
-                            'projects']);
+                            ga('send', 'event', 'Ajax_mode', 'projects');
                             break;
                         case 'sample_code':
                             $('#main').load('content/sample_code.php');
-                            _gaq.push(['_trackEvent', 'Ajax_mode', 
-                            'sample_code']);
+                            ga('send', 'event', 'Ajax_mode', 'sample_code');
                             break;
                         case 'ajax_mode':
                             $('#main').load('content/ajax_mode.php');
-                            _gaq.push(['_trackEvent', 'Ajax_mode', 
-                            'ajax_mode']);
+                            ga('send', 'event', 'Ajax_mode', 'ajax_mode');
                             break;
                         case 'contact':
                             $('#main').load('content/contact.php');
-                            _gaq.push(['_trackEvent', 'Ajax_mode', 
-                            'contact']);
+                            ga('send', 'event', 'Ajax_mode', 'contact');
                             break;
                         case 'about':
                             $('#main').load('content/about.php');
-                            _gaq.push(['_trackEvent', 'Ajax_mode', 
-                            'about']);
+                            ga('send', 'event', 'Ajax_mode', 'about');
                             break;
                         default:
                             $('#main').html('');
-                            _gaq.push(['_trackEvent', 'Ajax_mode', 
-                            'main']);
+                            ga('send', 'event', 'Ajax_mode', 'main');
                             break;
                     }
                 }
