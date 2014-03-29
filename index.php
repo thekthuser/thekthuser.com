@@ -10,9 +10,9 @@
         <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
             <title>the kth user</title>
+    <?php include_once("analyticstracking.php"); ?>
     </head>
     <body>
-    <?php include_once("analyticstracking.php"); ?>
         <div id="container">
             <div id="header">
                 <div id="h-center"><h1>
