@@ -56,43 +56,33 @@
                     switch(page) {
                         case 'projects':
                             $('#main').load('content/projects.php');
-                            <?php $dir = "../"; ?>
-                            <?php //$_SESSION['page'] = "projects"; ?>
+                            _gaq.push(['_trackEvent', 'Ajax_mode', 
+                            'projects']);
                             break;
                         case 'sample_code':
                             $('#main').load('content/sample_code.php');
+                            _gaq.push(['_trackEvent', 'Ajax_mode', 
+                            'sample_code']);
                             break;
                         case 'ajax_mode':
                             $('#main').load('content/ajax_mode.php');
+                            _gaq.push(['_trackEvent', 'Ajax_mode', 
+                            'ajax_mode']);
                             break;
                         case 'contact':
                             $('#main').load('content/contact.php');
-                            //{'email': '<?php echo $_REQUEST['email']; ?>'});
-
-        /*console.log('click contact');
-                            <?php if (!isset($_REQUEST['email'])) { ?>
-        console.log('no email');
-                                $('#main').load('content/contact.php');
-                            <?php } else { ?>
-                                $('#main').load('content/contact.php',
-                                {'email': '<?php echo $_REQUEST['email']; ?>'});
-        console.log('email');
-                                <?php }; ?>*/
-/*console.log('click contact');
-<?php if (isset($_REQUEST['email']) && ($_REQUEST['email'] != '')) { ?>
-    $('#main').load('content/contact.php', {'email': '<?php echo $_REQUEST['email']; ?>'});
-    console.log('email');
-<?php } else { ?>
-    $('#main').load('content/contact.php');
-    console.log('no email');
-<?php } ?>*/
-                                
+                            _gaq.push(['_trackEvent', 'Ajax_mode', 
+                            'contact']);
                             break;
                         case 'about':
                             $('#main').load('content/about.php');
+                            _gaq.push(['_trackEvent', 'Ajax_mode', 
+                            'about']);
                             break;
                         default:
                             $('#main').html('');
+                            _gaq.push(['_trackEvent', 'Ajax_mode', 
+                            'main']);
                             break;
                     }
                 }
