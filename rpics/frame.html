@@ -11,7 +11,6 @@
 
         <script type="text/javascript">
             $(document).ready(function() {
-            //console.log("enter ready");
                 entries = [];
                 current = 0;
                 bWidth = window.innerWidth;
@@ -84,7 +83,6 @@
             var entries;
 
             function scrape(entries) {
-            //console.log("enter scrape");
                 var directLink = new RegExp(
                 '\.(jpg|jpeg|png|bmp|gif)$');
                 var count = 0;
@@ -94,9 +92,7 @@
 
                 $.getJSON('http://www.reddit.com/r/all.json?jsonp=?&limit=100',
                 function(data) {
-                //console.log("enter getJSON");
                     $.each(data.data.children, function(i, item) {
-                    //console.log("enter each");
                         if((directLink.test(item.data.url)) && 
                         (((nsfw == false) && (item.data.over_18 == false)) ||
                         (nsfw == true))) {
@@ -109,20 +105,10 @@
                             entries[count]['image'] = new Image();
                             entries[count]['image'].src = entries[count]['url'];
                             count++;
-                            //console.log("loop " + count);
                         }
                     });
                     entries.sort(function(a, b) { return a.order - b.order; });
-                    /*while (true) {
-                        {}
-                        if (entries[0]['image'].complete) {
-                            place(entries, 0);
-                            break;
-                        }
-                    }*/
-                //console.log("exit getJSON");
                 });
-            //console.log("exit scrape");
             }
 
             function place(entries, current) {
@@ -152,11 +138,31 @@
                 ratio = width / height;
                 if ((width > bWidth) || (height > bHeight)) {
                     if (ratio > 1.0) {
-                        $('#image').width(bWidth);
-                        $('#image').height(height * (bWidth / width));
+                        if (bWidth == width) {
+                            //resize width based on height
+                            resize(Math.floor(width * (bHeight / height)), 
+                            bHeight);
+                        } else {
+                            //resize height based on width
+                            resize(bWidth, 
+                            Math.floor(height * (bWidth / width)));
+                        }
+                    } else if (ratio < 1.0) {
+                        if (bHeight == height) {
+                            //resize height based on width
+                            resize(bWidth, 
+                            Math.floor(height * (bWidth / width)));
+                        } else {
+                            //resize width based on height
+                            resize(Math.floor(width * (bHeight / height)), 
+                            bHeight);
+                        }
                     } else {
-                        $('#image').height(bHeight);
-                        $('#image').width(width * (bHeight / height));
+                        if (bWidth > bHeight) {
+                            resize(bHeight, bHeight);
+                        } else {
+                            resize(bWidth, bWidth);
+                        }
                     }
                 } else {
                     $('#image').width(width);
