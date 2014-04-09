@@ -43,7 +43,7 @@
                 }, 60000);
 
                 $('#pause').click( function() {
-                    ga('send', 'rpics', 'pause');
+                    ga('send', 'event', 'rpics', 'pause');
                     if (pause == false) {
                         pause = true;
                         $('#pause').attr('src', 'pause_dcdcdc.png');
@@ -54,7 +54,7 @@
                 });
 
                 $('#next').click( function() {
-                    ga('send', 'rpics', 'next');
+                    ga('send', 'event', 'rpics', 'next');
                     if (current != "loading") {
                         if (current >= entries.length) {
                             place(entries, 0);
@@ -67,7 +67,7 @@
                 });
 
                 $('#previous').click( function() {
-                    ga('send', 'rpics', 'previous');
+                    ga('send', 'event', 'rpics', 'previous');
                     if (current != "loading") {
                         if (current <= 1) {
                             place(entries, entries.length - 1);
@@ -86,7 +86,7 @@
             var entries;
 
             function scrape(entries) {
-                ga('send', 'rpics', 'scrape');
+                ga('send', 'event', 'rpics', 'scrape');
                 var directLink = new RegExp(
                 '\.(jpg|jpeg|png|bmp|gif)$');
                 var count = 0;
