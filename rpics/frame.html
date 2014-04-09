@@ -140,21 +140,21 @@
                     if (ratio > 1.0) {
                         if (bWidth == width) {
                             //resize width based on height
-                            resize(Math.floor(width * (bHeight / height)), 
+                            resize((width * (bHeight / height)), 
                             bHeight);
                         } else {
                             //resize height based on width
                             resize(bWidth, 
-                            Math.floor(height * (bWidth / width)));
+                            (height * (bWidth / width)));
                         }
                     } else if (ratio < 1.0) {
                         if (bHeight == height) {
                             //resize height based on width
                             resize(bWidth, 
-                            Math.floor(height * (bWidth / width)));
+                            (height * (bWidth / width)));
                         } else {
                             //resize width based on height
-                            resize(Math.floor(width * (bHeight / height)), 
+                            resize((width * (bHeight / height)), 
                             bHeight);
                         }
                     } else {
@@ -165,8 +165,8 @@
                         }
                     }
                 } else {
-                    $('#image').width(width);
-                    $('#image').height(height);
+                    $('#image').width(Math.floor(width));
+                    $('#image').height(Math.floor(height));
                 }
             }
         </script>
