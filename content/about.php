@@ -1,6 +1,6 @@
 <div class="content">
 <h2>What is k<sup>th</sup>?</h2>
-<p>Pronoucned "kayth"; a specific, yet arbitrary number.<br />
+<p>Pronounced "kayth"; a specific, yet arbitrary number.<br />
 1 .. k .. n</p>
 
 </div>
