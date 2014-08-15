@@ -1,4 +1,10 @@
 <div class="content">
+<h2>Second Saturday</h2>
+<p>Second Saturday Staten Island is a monthly art walk on Staten Island, NY. The site was static originally. After recovering the domain and web hosting from its previous owner I wrote the backend in PHP with a MySQL database. The new admin console allows the site maintainers to post updates without mucking about in HTML. A dynamic Google Map was also added to show the locations of sponsors, members, and events.</p>
+<div class="link">~ <a href="http://secondsaturdaystatenisland.org">link</a></div>
+</div>
+
+<div class="content">
 <h2>The Reddit Picture Frame</h2>
 <p>The idea here was to find a use for extra displays. The frame will look at the top 100 posts in r/all, pick those that link directly to an image, and display them in a random order. After getting to the end of that list (usually between 40 and 50 minutes), it will look at the new top 100 posts and start over.</p>
 <p>If you have a spare display, pull this up and leave it running. You will see something new every minute.

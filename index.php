@@ -1,7 +1,7 @@
 <html>
     <head>
         <link href="css/reset.css" type="text/css" rel="stylesheet" />
-        <link href="css/style.css" types="text/css" rel="stylesheet" />
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
         <link href="images/kth24.ico" type="image/png" rel="icon" />
         <script src="http://use.edgefonts.net/inconsolata.js"></script>
         <script type="text/javascript"
