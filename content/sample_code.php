@@ -10,6 +10,33 @@
 </div>
 
 <div class="content">
+    <h2>CherryPy</h2>
+    <p>The next few entries are single page web apps written in Python, using the CherryPy Framework. They can be downloaded and run using the command python name_of_app.py in the correct directory and then navigating to 127.0.0.1:8080. More information on CherryPy can be found in the link below.</p>
+    <div class="link">
+        ~ <a href="http://www.cherrypy.org">link </a>
+    </div>
+</div>
+
+<div class="content">
+    <h2>Alien Numbers</h2>
+    <p>The decimal system is composed of ten digits, which we represent as '0123456789' in order from lowest to highest. Other, alien numeral systems may be composed of some number of digits which may or may not include '0123456789'. This app will translate numbers from one alien system to another. For example, if the alien numeral system were represented as 'oF8', the numbers one through ten would be:</p>
+    <p> F,8,Fo, FF, F8, 8o, 8F, 88, Foo, FoF</p>
+    <div class="link">~ <a href="downloads/Alien_Numbers.zip" onClick="ga('send', 'event', 'Downloads', 'alien_numbers');">zip</a></div>
+</div>
+
+<div class="content">
+    <h2>Happy Numbers</h2>
+    <p>A happy number is defined by the following process. Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers (or sad numbers). This app will identify happy numbers</p>
+    <div class="link">~ <a href="downloads/Happy_Numbers.zip" onClick="ga('send', 'event', 'Downloads', 'happy_numbers');">zip</a></div>
+</div>
+
+<div class="content">
+    <h2>Palindrome Finder</h2>
+    <p>Given a block of text, this app will find the longest palindrome contained (ignoring spaces).</p>
+    <div class="link">~ <a href="downloads/Palindrome_Finder.zip" onClick="ga('send', 'event', 'Downloads', 'palindrome_finder');">zip</a></div>
+</div>
+
+<div class="content">
     <h2>TI-BASIC</h2>
     <p>The following programs are some of the first I ever wrote. I got a TI-83 Plus graphing calculator for math classes in high school and when I realized I could make games on it I set about doing that. They were lost for many years until I dicovered them backed up onto a cd in the attic. The source code was still lost for a few years following that because they were set to be non-editable. I was finally able to recover the source with the help of some TI assembly utilities. If you want to run them you will need a TI-83 Plus emulator and ROM in addition to the linked 8XP files. A popular emulator is linked here.</p>
     <div class="link">
