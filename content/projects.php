@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content hidden">
 <h2>Second Saturday</h2>
 <p>Second Saturday Staten Island is a monthly art walk on Staten Island, NY. The site was static originally. After recovering the domain and web hosting from its previous owner I wrote the backend in PHP with a MySQL database. The new admin console allows the site maintainers to post updates without mucking about in HTML. A dynamic Google Map was also added to show the locations of sponsors, members, and events.</p>
 <div class="link">~ <a href="http://secondsaturdaystatenisland.org">link</a></div>

@@ -155,3 +155,6 @@ input[name=email] {
 .bottom {
     height: 3em;
     }
+.hidden {
+    display:none;
+}
