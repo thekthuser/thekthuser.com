@@ -7,7 +7,7 @@
         src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
         </script>
         <script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
-<!-- To toggle nsfw filter off add ?nsfw to the end of the url -->
+        <!-- To toggle nsfw filter off add ?nsfw to the end of the url -->
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -32,7 +32,6 @@
                     if (pause != true) {
                         if (current >= entries.length) {
                             place([], "loading");
-                            current = 0;
                             entries = [];
                             scrape(entries);
                         } else {
@@ -100,6 +99,7 @@
                         if((directLink.test(item.data.url)) && 
                         (((nsfw == false) && (item.data.over_18 == false)) ||
                         (nsfw == true))) {
+                            console.log(count)
                             entries[count] = [];
                             entries[count]['title'] = item.data.title;
                             entries[count]['url'] = item.data.url;
@@ -112,6 +112,8 @@
                         }
                     });
                     entries.sort(function(a, b) { return a.order - b.order; });
+                    place(entries, 0)
+                    current++
                 });
             }
 
