@@ -13,7 +13,7 @@
 
 <div class="content">
 <h2>Who is k<sup>th</sup>?</h2>
-<p>I am a developer living in the NY/Westcheser area. Python is often my language of choice, but lately I have been using PHP and Javascript more often. At home I run openSUSE with KDE. In the past I have used other Linux distros as well as Mac and Windows. I like "jailbreaking" my devices are eventually I do that to everything I own.</p>
+<p>I am a developer living in the NY/Westcheser area. Python is often my language of choice, but lately I have been using PHP and Javascript more often. At home I run openSUSE with KDE. In the past I have used other Linux distros as well as Mac and Windows. I like "jailbreaking" my devices and eventually I do that to everything I own.</p>
 <p>If you want to contact me fill out the form <span class="link"><a href='?page=contact'>here.</a></span></p>
 </div>
 <div class="bottom"></div>
