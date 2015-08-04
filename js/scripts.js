@@ -61,6 +61,14 @@ $(document).ready(function() {
                         $('#invalid').html(
                         "<p>A valid email address is required.</p>");
                         break;
+                    case "no_captcha":
+                        $('#invalid').html(
+                        "<p>You must complete the captcha.</p>");
+                        break;
+                    case "failed_captcha":
+                        $('.content').html(
+                        "<p>You failed the captcha.</p>");
+                        break;
                     default:
                     //is an error
                         $('.content').html(

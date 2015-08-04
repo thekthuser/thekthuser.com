@@ -15,6 +15,7 @@
         </tbody></table>
        
         <input type="submit" id="contact_button" value="Submit" />
+        <div class="g-recaptcha" data-sitekey="6LdZ3fASAAAAADKEzxX_1gxs41FkFDiX_kF5xCzZ"></div>
     </form>
     <div id="invalid"></div>
 

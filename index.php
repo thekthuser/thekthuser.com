@@ -9,6 +9,7 @@
         </script>
         <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
             <title>the kth user</title>
     <?php include_once("analyticstracking.php"); ?>
     </head>
