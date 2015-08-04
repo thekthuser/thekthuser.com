@@ -1,12 +1,15 @@
 <?php
     require_once "Mail.php";
 
+    $status = "";
+
     if (isset($_POST['g-recaptcha-response'])) {
         $captcha = $_POST['g-recaptcha-response'];
     }
 
     if (!$captcha) {
         $status = "no_captcha";
+        exit;
     }
 
     $secret = "6LdZ3fASAAAAACsSG9tU9lK12PLXwrZwLfzIZOKA";
@@ -16,7 +19,6 @@
     if ($response, success == false) {
         $status = "failed_captcha";
     } else {
-        $status = "";
 
         $copy1 = "<thekthuser@thekthuser.com>";
         $from = $_POST['email'];
