@@ -44,12 +44,14 @@ $(document).ready(function() {
     $(document).on("click", "#contact_button", function() {
         var email = $('#email').val();
         var body = $('#body').val();
+        var captcha = $('#g-recaptcha-response').val();
         $.ajax({
             type: "POST",
             url: "content/sendmail.php",
             data: {
                 email: email,
-                body: body
+                body: body,
+                captcha: captcha,
             },
             success: function(status) {
                 switch(status) {
