@@ -5,6 +5,12 @@
 </div>
 
 <div class="content">
+<h2>mind+body birth</h2>
+<p>The professional site of Julietta Appleton - a childbirth educator and birth hypnosis teacher. This site was created using CakePHP. One of the most important features building it was that it's content be completely editable by the (non-coding) end user. This was accomplished with some specific design decisions and, ultimately, the TinyMCE.js plugin. mind+body birth also benefits from the Zurb Foundation responsive CSS framework. It looks great on phones, tablets, and desktops. The contact form is protected by Google's new NoCAPTCHA reCAPTCHA.</p>
+<div class="link">~ <a href="http://mindplusbodybirth.com/">link</a></div>
+</div>
+
+<div class="content">
 <h2>The Reddit Picture Frame</h2>
 <p>The idea here was to find a use for extra displays. The frame will look at the top 100 posts in r/all, pick those that link directly to an image, and display them in a random order. After getting to the end of that list (usually between 40 and 50 minutes), it will look at the new top 100 posts and start over.</p>
 <p>If you have a spare display, pull this up and leave it running. You will see something new every minute.
