@@ -10,6 +10,14 @@
 </div>
 
 <div class="content">
+    <h2>Express TODO</h2>
+    <p>A short TODO web app written using Express.js, Parse, and Backbone.js, with one twist: items marked as done stay as such and can never be edited or reclassified again. The source is available on github. Run 'npm install' from the app's root directory. The app can then be started at localhost:3000 by running 'npm start'.</p>
+    <div class="link">
+        ~ <a href="https://github.com/thekthuser/express_todo">link </a>
+    </div>
+</div>
+
+<div class="content">
     <h2>CherryPy</h2>
     <p>The next few entries are single page web apps written in Python, using the CherryPy Framework. They can be downloaded and run using the command python name_of_app.py in the correct directory and then navigating to 127.0.0.1:8080. More information on CherryPy can be found in the link below.</p>
     <div class="link">
