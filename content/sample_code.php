@@ -67,7 +67,7 @@
 <div class="content">
     <h2>DIABLO</h2>
     <p>Blizzard's Diablo was a favorite game of mine and this is a text-only version of that for the TI-83+. All 3 character classes are available, can gain experience, and equip different weapons. There are many monsters from the original game included and most, if not all, bosses can be randomly encountered. If you want to play, make sure to check the README. There is a little preparation that needs to be done before starting the game if you intend to save.</p>
-    <div class="link">~ <a href="DIABLO.zip" onClick="ga('send', 'event', 'Downloads', 'diablo');">zip</a></div>
+    <div class="link">~ <a href="downloads/DIABLO.zip" onClick="ga('send', 'event', 'Downloads', 'diablo');">zip</a></div>
 </div>
 
 <div class="bottom"></div>
