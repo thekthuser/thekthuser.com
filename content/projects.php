@@ -1,7 +1,7 @@
 <div class="content">
 <h2>Approachable Art</h2>
-<p>An art gallery and store split into two sites. The gallery is finished. The store is not. These are my first and second Django projects, respectively. Artwork can be displayed in three sizes: thumbnails for browsing, screen-size, and full-size to see fine detail. An admin dashboard allows artists to add/edit/remove works and biographical information.</p>
-<div class="link">~ <a href="http://www.dennisgreenapproachableart.com">gallery</a> ~ store</div>
+<p>An art gallery and store split into two sites. Both are finished, but the store has yet to be populated. These are my first and second Django projects, respectively. Artwork can be displayed in three sizes: thumbnails for browsing, screen-size, and full-size to see fine detail. An admin dashboard allows artists to add/edit/remove works and biographical information.</p>
+<div class="link">~ <a href="http://www.dennisgreenapproachableart.com">gallery</a> ~ <a href="https://www.approachableartcollection.com">store</a></div>
 </div>
 
 <div class="content">
