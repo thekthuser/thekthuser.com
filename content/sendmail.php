@@ -1,5 +1,6 @@
 <?php
     require_once "Mail.php";
+    include('../secrets.php');
 
     $status = "";
 
@@ -11,8 +12,7 @@
         $status = "no_captcha";
     } else {
 
-        $secret = "6LdZ3fASAAAAACsSG9tU9lK12PLXwrZwLfzIZOKA";
-        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']);
+        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $captcha_secret . "&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']);
         $responseKeys = json_decode($response, true);
 
         if (intval($responseKeys['success']) !== 1) {
