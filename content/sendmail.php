@@ -13,8 +13,9 @@
 
         $secret = "6LdZ3fASAAAAACsSG9tU9lK12PLXwrZwLfzIZOKA";
         $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']);
+        $responseKeys = json_decode($response, true);
 
-        if ($response['success'] == false) {
+        if (intval($responseKeys['success']) !== 1) {
             $status = "failed_captcha";
         } else {
 
