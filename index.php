@@ -3,11 +3,11 @@
         <link href="css/reset.css" type="text/css" rel="stylesheet" />
         <link href="css/style.css" type="text/css" rel="stylesheet" />
         <link href="images/kth24.ico" type="image/png" rel="icon" />
-        <script src="http://use.edgefonts.net/inconsolata.js"></script>
+        <script src="https://use.edgefonts.net/inconsolata.js"></script>
         <script type="text/javascript"
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
         </script>
-        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
             <title>the kth user</title>

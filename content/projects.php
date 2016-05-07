@@ -7,7 +7,7 @@
 <div class="content">
 <h2>mind+body birth</h2>
 <p>The professional site of Julietta Appleton - a childbirth educator and birth hypnosis teacher. This site was created using CakePHP. One of the most important features building it was that it's content be completely editable by the (non-coding) end user. This was accomplished with some specific design decisions and, ultimately, the TinyMCE.js plugin. mind+body birth also benefits from the Zurb Foundation responsive CSS framework. It looks great on phones, tablets, and desktops. The contact form is protected by Google's new NoCAPTCHA reCAPTCHA.</p>
-<div class="link">~ <a href="http://mindplusbodybirth.com/">link</a></div>
+<div class="link">~ <a href="https://mindplusbodybirth.com/">link</a></div>
 </div>
 
 <div class="content">

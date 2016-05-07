@@ -4,9 +4,9 @@
         <link rel="stylesheet" type="text/css" href="reset.css"></link>
         <link rel="stylesheet" type="text/css" href="styles.css"></link>
         <script type="text/javascript"
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
         </script>
-        <script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
+        <script type="text/javascript" src="https://fgnass.github.io/spin.js/spin.min.js"></script>
         <!-- To toggle nsfw filter off add ?nsfw to the end of the url -->
 
         <script type="text/javascript">
@@ -72,7 +72,7 @@
                     resize(
                         entries[current]['image'].naturalWidth, 
                         entries[current]['image'].naturalHeight);
-                    $('#url').attr('href', "http://www.reddit.com" + 
+                    $('#url').attr('href', "https://www.reddit.com" + 
                     entries[current].permalink).html(entries[current].title);
                 }
             }
@@ -86,7 +86,7 @@
                 if (isNSFW.test(window.location.href)) 
                 { var nsfw = true; } else { var nsfw = false; }
 
-                $.getJSON('http://www.reddit.com/r/all.json?jsonp=?&limit=100',
+                $.getJSON('https://www.reddit.com/r/all.json?jsonp=?&limit=100',
                 function(data) {
                     $.each(data.data.children, function(i, item) {
                         if((directLink.test(item.data.url)) && 
