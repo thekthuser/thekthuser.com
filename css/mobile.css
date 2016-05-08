@@ -11,3 +11,7 @@
     position: relative;
     z-index: 99;
 }
+
+#nav li {
+    width: 11em;
+}
