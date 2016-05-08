@@ -66,11 +66,6 @@ sup {
     border-color: #DAA520;
     list-style-type: none;
     }
-#nav-button:hover {
-    background: #DAA520;
-    color: #222222;
-    cursor: pointer;
-    }
 #nav ul {
     display: none;
     border-style: solid;
@@ -84,10 +79,6 @@ sup {
     border-style: solid;
     border-color: #DAA520;
     border-right-width: 2px;
-    }
-#nav li:hover {
-    background: #DAA520;
-    color: #222222;
     }
 #nav-button li {
     cursor: pointer;

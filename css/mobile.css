@@ -1,18 +1,4 @@
-#h-center {
-    border-bottom-width: 4em;
-}
-#nav {
-    width:80%;
-    position: relative;
-    top: -2em;
-}
-#nav ul {
-    display:block;
-}
-.mob-link {
+#nav-menu li {
+    background: #DAA520;
     color: #222222;
-}
-#main {
-    width: 80%;
-    left: 10%;
 }

@@ -1,0 +1,10 @@
+
+#nav-button:hover {
+    background: #DAA520;
+    color: #222222;
+    cursor: pointer;
+    }
+#nav li:hover {
+    background: #DAA520;
+    color: #222222;
+}

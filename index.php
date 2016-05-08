@@ -1,5 +1,7 @@
 <html>
     <head>
+        <?php include_once("analyticstracking.php"); ?>
+        <?php include("detectmobilebrowser.php"); ?>
         <link href="css/reset.css" type="text/css" rel="stylesheet" />
         <link href="css/style.css" type="text/css" rel="stylesheet" />
         <link href="images/kth24.ico" type="image/png" rel="icon" />
@@ -10,8 +12,16 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php if ($mobile) { ?>
+            <script type="text/javascript" src="js/mobile.js"></script>
+            <link href="css/mobile.css" type="text/css" rel="stylesheet" />
+        <?php } else { ?>
+            <script type="text/javascript" src="js/desktop.js"></script>
+            <link href="css/desktop.css" type="text/css" rel="stylesheet" />
+        <?php } ?>
+
             <title>the kth user</title>
-    <?php include_once("analyticstracking.php"); ?>
     </head>
     <body>
         <div id="container">
