@@ -11,6 +11,12 @@
 </div>
 
 <div class="content">
+<h2>A Song For All Seasons</h2>
+<p>Originally a Wordpress blog, this was re-written in Flask to make it a harder target to break into. The admin dashboard allows the end user to make changes with a WYSIWYG style editor.</p>
+<div class="link">~ <a href="https://asongforallseasons.com/">link</a></div>
+</div>
+
+<div class="content">
 <h2>The Reddit Picture Frame</h2>
 <p>The idea here was to find a use for extra displays. The frame will look at the top 100 posts in r/all, pick those that link directly to an image, and display them in a random order. After getting to the end of that list (usually between 40 and 50 minutes), it will look at the new top 100 posts and start over.</p>
 <p>If you have a spare display, pull this up and leave it running. You will see something new every minute.
