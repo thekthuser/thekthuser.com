@@ -1,6 +1,6 @@
 <div class="content">
 <h2>Sample Code</h2>
-<p>Many sample projects are available on my github: <a href="https://github.com/thekthuser">github.com/thekthuser</a></p>
+<p>Many sample projects are available on my github: <a class="inline-link" href="https://github.com/thekthuser">github.com/thekthuser</a></p>
 <p>A few others are available here.</p>
 </div>
 
