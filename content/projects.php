@@ -25,19 +25,6 @@
 </div>
 
 <div class="content">
-<h2>Rem&#225;s</h2>
-<p>Rem&#225;s is a non-profit I have been working with for a while. I have contributed to all aspects of the site, from systems administration to the back and frontend development.</p>
-<p>Rem&#225;s' mission is to help immigrants send money home easily and efficiently. We are nearing launch and will begin by focusing on zip code 11220 in Brooklyn, NY.</p>
-<div class="link">~ <a href="http://sendremas.org/">link</a></div>
-</div>
-
-<div class="content">
-<h2>Hiroko Creative Educator</h2>
-<p>This is a very simple site that was recreated pixel for pixel mostly to get the owner off of a web host that was ripping her off.</p>
-<div class="link">~ <a href="http://www.hirokocreativeeducator.com">link</a></div>
-</div>
-
-<div class="content">
 <h2>Action Bindery</h2>
 <p>A single page site for a bindery company.</p>
 <div class="link">~ <a href="http://actionbindery.com/">link</a></div>
@@ -49,24 +36,3 @@
 <p>Note: As of July 2015 this site is under new management and no longer using my code.</p>
 <div class="link">~ <a href="http://secondsaturdaystatenisland.org">link</a></div>
 </div>
-
-<div class="content">
-<h2>Socially Awkward Magazine</h2>
-<p>Socially Awkward Magazine is a Wordpress site that the owner asked me for help on. I created a custom page for displaying artists who blog on the site. I also tidied up his original install by adding and removing appropriate plugins and adjusting his configuration to eliminate any security issues, etc.</p>
-<p>Note: This site is no longer live.</p>
-<div class="link">~ <a href="http://sociallyamag.com/">link</a></div>
-</div>
-
-<div class="content">
-<h2>The Skull Society</h2>
-<p>This was a weekend project for a friend. It was created in phpBB and customized to his requests.</p>
-<p>Note: The site is no longer live.</p>
-<div class="link">~ <a href="http://the-skull-society.net/">link</a></div>
-</div>
-
-<div class="content">
-<h2>TrickleUp</h2>
-<p>TrickleUp was one of several non-profits who participated in the Helping Hacks hackathon in August 2012. A team of originally five people worked together to improve TrickleUp's internal data collection and visualization system. We received the "best technical solution" award. Progress is stalled waiting for more input from TrickleUp.</p>
-<div class="link">~ <a href="http://trickleup.org/">link</a></div>
-</div>
-<div class="bottom"></div>
