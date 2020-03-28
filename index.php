@@ -41,7 +41,6 @@
                 <?php if ($_COOKIE['mode'] == 'ajax') { ?>
                     <li title="projects">Projects</li>
                     <li title="sample_code">Sample Code</li>
-                    <li title="ajax_mode">Ajax Mode</li>
                     <li title="contact">Contact</li>
                     <li title="about">About</li>
                 <?php } else { ?>
@@ -49,8 +48,6 @@
                     <li>Projects</li></a>
                     <a class="nav-link" href="?page=sample_code">
                     <li>Sample Code</li></a>
-                    <a class="nav-link" href="?page=ajax_mode">
-                    <li>Ajax Mode</li></a>
                     <a class="nav-link" href="?page=contact">
                     <li>Contact</li></a>
                     <a class="nav-link" href="?page=about">
