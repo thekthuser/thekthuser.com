@@ -1,19 +1,8 @@
 <div class="content">
-<h2>What is k<sup>th</sup>?</h2>
-<p>Pronounced "kayth"; a specific, yet arbitrary number.<br />
-1<sup>st</sup> ... k<sup>th</sup> ... n<sup>th</sup></p>
-
-</div>
-
-<div class="content">
-<h2>Why is k<sup>th</sup> monospaced?</h2>
-<p>The color scheme is based on my coding environment. The font is different, but Inconsolata is a better looking font for this purpose. The Reddit Picture Frame, although hosted here, doesn't match the rest of the site because it's meant to stand on it's own.</p>
-</div>
-
-
-<div class="content">
 <h2>Who is k<sup>th</sup>?</h2>
-<p>I am a developer living in the NY/Westcheser area. Python is often my language of choice, but lately I have been using PHP and Javascript more often. At home I run openSUSE with KDE. In the past I have used other Linux distros as well as Mac and Windows. I like "jailbreaking" my devices and eventually I do that to everything I own.</p>
+<p>I am a web developer who likes working in Python, but also has experience in various other languages, dating all the way back to TI-BASIC on a Texas Instruments graphing calculator.</p>
+<p>I am a long time Linux user who has tried several different distros (currently settled on Kubuntu), an avid reader of tech news, and a tinkerer who eventually 'jailbreaks' every device I own.</p>
+<p>Outside of tech I am a hobbyist chef who is always on the lookout for new recipes.</p>
 <p>If you want to contact me fill out the form <span class="link"><a href='?page=contact'>here.</a></span></p>
 </div>
 <div class="bottom"></div>
