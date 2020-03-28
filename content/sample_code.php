@@ -1,4 +1,10 @@
 <div class="content">
+<h2>Sample Code</h2>
+<p>Many sample projects are available on my github: <a href="https://github.com/thekthuser">github.com/thekthuser</a></p>
+<p>A few others are available here.</p>
+</div>
+
+<div class="content">
 <h2>Blocks Puzzle</h2>
 <p>A fun puzzle someone sent me. I wrote the solution in Python. Given a sequence of blocks of random length, arrange them into columns without changing their order such that the sum of the differences between each column length and the average length of all columns (the balance delta) is minimized. A zip containing source code and sample input are provided. Input must be formatted as the sample is - with one block's size per line.</p>
 <div class="link">
@@ -6,30 +12,6 @@
 ~ <span onclick="$('.image').toggle()">example image</span>
 </div>
 <img class="image" src="images/blocks_example.jpg" onclick="$('.image').hide()"> </img>
-</div>
-
-<div class="content">
-<h2>MealPlans</h2>
-<p>A small API written in Go. It was my first experience in the language and written in just over a weekend. The end result? I learned Go is a pleasant language to work in.</p>
-<div class="link">~ <a href="https://github.com/thekthuser/mealplans">link </a></div>
-</div>
-
-<div class="content">
-<h2>Restaurant Review</h2>
-<p>A restaurant review app written in Django. It stores names, descriptions, and locations, as well as reviews. Reviews will impact which restaurants team members are shown.</p>
-<div class="link">~ <a href="https://github.com/thekthuser/matador">link </a></div>
-</div>
-
-<div class="content">
-<h2>Express TODO</h2>
-<p>A short TODO web app written using Express.js, Parse, and Backbone.js, with one twist: items marked as done stay as such and can never be edited or reclassified again. The source is available on github. Run 'npm install' from the app's root directory. The app can then be started at localhost:3000 by running 'npm start'.</p>
-<div class="link">~ <a href="https://github.com/thekthuser/express_todo">link </a></div>
-</div>
-
-<div class="content">
-<h2>Pet Onboarding</h2>
-<p>A pet profile questionnaire, allowing the user to enter details about their pet, which is saved for later use. This was written in Python/Flask and saves into a SQLite database.</p>
-<div class="link">~ <a href="https://github.com/thekthuser/pet_onboarding">link </a></div>
 </div>
 
 <div class="content">
