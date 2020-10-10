@@ -5,7 +5,7 @@
 </div>
 
 <div class="content">
-<h2>ES API</h2>
+<h2>Elasticsearch API</h2>
 <p>I built ES API to test out Elasticsearch. The takeaway? I really like Elasticsearch, but I wish it didn't need to be used in conjunction with a separate database.</p>
 <div class="link">~ <a href="https://github.com/thekthuser/es_api">link</a></div>
 </div>
