@@ -1,7 +1,25 @@
 <div class="content">
 <h2>Sample Code</h2>
 <p>Many sample projects are available on my github: <a class="inline-link" href="https://github.com/thekthuser">github.com/thekthuser</a></p>
-<p>A few others are available here.</p>
+<p>A few others are available here. Many of these are weekend projects where I can try out new technologies.</p>
+</div>
+
+<div class="content">
+<h2>es_api</h2>
+<p>I built es_api to test out Elasticsearch. The takeaway? I really like Elasticsearch, but I wish it didn't need to be used in conjunction with a separate database.</p>
+<div class="link">~ <a href="https://github.com/thekthuser/es_api">link</a></div>
+</div>
+
+<div class="content">
+<h2>express_todo</h2>
+<p>express_todo was an experiment with full stack Javascript. Express.js, Parse, and Backbone.js were used to create a TODO app.</p>
+<div class="link">~ <a href="https://github.com/thekthuser/express_todo">link</a></div>
+</div>
+
+<div class="content">
+<h2>ListViewDemo</h2>
+<p>ListViewDemo was a small, proof of concept project to try out Android development. It displays the current top 25 iTunes App Store apps.</p>
+<div class="link">~ <a href="https://github.com/thekthuser/ListViewDemo">link</a></div>
 </div>
 
 <div class="content">

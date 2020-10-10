@@ -1,7 +1,14 @@
 <div class="content">
+<h2>Spliki</h2>
+<p>Spliki, the 'Anti-Spoiler Wiki,' is a passion project turned startup. Users provide their current place in a long running story and the site uses that information to filter out any future developments as they browse the site. This way, they can read articles with no fear of spoilers.</p>
+<p>Spliki was build as a Python/Flask app, persists data in a PostgreSQL database, and runs serverlessly on AWS Lambda.</p>
+<div class="link">~ <a href="https://spliki.com">link</a></div>
+</div>
+
+<div class="content">
 <h2>Approachable Art</h2>
 <p>An art gallery and store split into two sites. Both are finished, but the store has yet to be populated. These are my first and second Django projects, respectively. Artwork can be displayed in three sizes: thumbnails for browsing, screen-size, and full-size to see fine detail. An admin dashboard allows artists to add/edit/remove works and biographical information.</p>
-<div class="link">~ <a href="http://www.dennisgreenapproachableart.com">gallery</a> ~ <a href="https://www.approachableartcollection.com">store</a></div>
+<div class="link">~ <a href="https://www.dennisgreenapproachableart.com">gallery</a> ~ <a href="https://www.approachableartcollection.com">store</a></div>
 </div>
 
 <div class="content">
@@ -27,12 +34,12 @@
 <div class="content">
 <h2>Action Bindery</h2>
 <p>A single page site for a bindery company.</p>
-<div class="link">~ <a href="http://actionbindery.com/">link</a></div>
+<div class="link">~ <a href="https://actionbindery.com/">link</a></div>
 </div>
 
 <div class="content">
 <h2>Second Saturday</h2>
 <p>Second Saturday Staten Island is a monthly art walk on Staten Island, NY. The site was static originally. After recovering the domain and web hosting from its previous owner I wrote the backend in PHP with a MySQL database. The new admin console allows the site maintainers to post updates without mucking about in HTML. A dynamic Google Map was also added to show the locations of sponsors, members, and events.</p>
 <p>Note: As of July 2015 this site is under new management and no longer using my code.</p>
-<div class="link">~ <a href="http://secondsaturdaystatenisland.org">link</a></div>
+<div class="link">~ <a href="https://secondsaturdaystatenisland.org">link</a></div>
 </div>
