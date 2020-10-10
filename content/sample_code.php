@@ -5,21 +5,15 @@
 </div>
 
 <div class="content">
-<h2>es_api</h2>
-<p>I built es_api to test out Elasticsearch. The takeaway? I really like Elasticsearch, but I wish it didn't need to be used in conjunction with a separate database.</p>
+<h2>ES API</h2>
+<p>I built ES API to test out Elasticsearch. The takeaway? I really like Elasticsearch, but I wish it didn't need to be used in conjunction with a separate database.</p>
 <div class="link">~ <a href="https://github.com/thekthuser/es_api">link</a></div>
 </div>
 
 <div class="content">
-<h2>express_todo</h2>
-<p>express_todo was an experiment with full stack Javascript. Express.js, Parse, and Backbone.js were used to create a TODO app.</p>
+<h2>Express Todo</h2>
+<p>Express Todo was an experiment with full stack Javascript. Express.js, Parse, and Backbone.js were used to create a TODO app.</p>
 <div class="link">~ <a href="https://github.com/thekthuser/express_todo">link</a></div>
-</div>
-
-<div class="content">
-<h2>ListViewDemo</h2>
-<p>ListViewDemo was a small, proof of concept project to try out Android development. It displays the current top 25 iTunes App Store apps.</p>
-<div class="link">~ <a href="https://github.com/thekthuser/ListViewDemo">link</a></div>
 </div>
 
 <div class="content">
@@ -55,6 +49,12 @@
 <h2>Palindrome Finder</h2>
 <p>Given a block of text, this app will find the longest palindrome contained (ignoring spaces).</p>
 <div class="link">~ <a href="downloads/Palindrome_Finder.zip" onClick="ga('send', 'event', 'Downloads', 'palindrome_finder');">zip</a></div>
+</div>
+
+<div class="content">
+<h2>ListViewDemo</h2>
+<p>ListViewDemo was a small, proof of concept project to try out Android development. It displays the current top 25 iTunes App Store apps.</p>
+<div class="link">~ <a href="https://github.com/thekthuser/ListViewDemo">link</a></div>
 </div>
 
 <div class="content">
