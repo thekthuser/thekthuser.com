@@ -112,9 +112,11 @@
                             break;
                     }
                 } ?>
-              <div class="content">
-                <p>This page intentionally left blank.</p>
-              </div>
+                <?php if ($_SERVER['REQUEST_URI'] == "/index.php") { ?>
+                    <div class="content">
+                        <p>This page intentionally left blank.</p>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </body>
