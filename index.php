@@ -112,7 +112,7 @@
                             break;
                     }
                 } ?>
-                <?php if ($_SERVER['REQUEST_URI'] == "/index.php") { ?>
+                <?php if (($_SERVER['REQUEST_URI'] == "/index.php") || ($_SERVER['REQUEST_URI'] == "/")) { ?>
                     <div class="content">
                         <p>This page intentionally left blank.</p>
                     </div>
