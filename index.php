@@ -13,6 +13,7 @@
         <script type="text/javascript" src="js/scripts.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php error_reporting(E_ERROR | E_PARSE); ?>
         <?php if ($mobile) { ?>
             <script type="text/javascript" src="js/mobile.js"></script>
             <link href="css/mobile.css" type="text/css" rel="stylesheet" />
